@@ -4,6 +4,31 @@
 >"Math magicians" is a website for all fans of mathematics. It is a Single Page App (SPA) that allows users to:
  - Make simple calculations.
  - Read a random math-related quote.
+
+## Development set up
+Clone Repository  using 
+`git@github.com:isaacpitwa/math_magicians.git` 
+
+OR  using HTTPS
+
+`https://github.com/isaacpitwa/math_magicians.git` 
+
+move into project directory
+`cd math_magicians`
+
+Install  Project dependancies using `NPM`
+
+`npm install`
+
+Install  Project dependancies using   `Yarn`
+
+`yarn install`
+
+launch project locally with 
+
+`npm start` or `yarn start`
+
+
 ## Available Scripts
 
 In the project directory, you can run:
