@@ -5,6 +5,18 @@
  - Make simple calculations.
  - Read a random math-related quote.
 
+<!-- ## Live preview
+
+Take a look at the Movies page we Create => [link](https://juanse7793.github.io/Capstone-2/) -->
+
+## Built With
+
+- React
+- Jsx
+- Webpack
+- GitFlow
+- Javascript
+
 ## Development set up
 Clone Repository  using 
 `git@github.com:isaacpitwa/math_magicians.git` 
@@ -66,9 +78,7 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Author
-
-👤 **Isaac Pitwa**
+## 👤 Author
 
 - GitHub: [@isaacpitwa](https://github.com/isaacpitwa)
 - Twitter: [@isaacpitwa](https://twitter.com/isaacpitwa)
