@@ -32,11 +32,13 @@
 }
 
 .calc-btn {
-  border: 1px solid #BABABA;
+  border: 1px solid #bababa;
   border-top: 0;
   border-right: 0;
   padding: 18px;
 }
-.calc-btn:nth-child(4n),.calc-btn:last-child{
-  background-color: #F5913E;
+
+.calc-btn:nth-child(4n),
+.calc-btn:last-child {
+  background-color: #f5913e;
 }
