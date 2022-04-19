@@ -4,7 +4,7 @@
 }
 
 .calc-input {
-  width: 100%;
+  width: 98%;
   height: 52px;
   text-align: right;
   background-color: #858693;
@@ -12,6 +12,7 @@
   font-size: 1.5em;
   border: 0;
   padding: 0;
+  padding-right: 2%;
 }
 
 ::placeholder {

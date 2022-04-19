@@ -14,6 +14,10 @@ class CalculatorButton extends React.Component {
       // Handle Arithmetic Operations
     }
     // update input value
+    if (label === 'AC') {
+      valueChange('');
+      return;
+    }
     valueChange(label);
   }
 

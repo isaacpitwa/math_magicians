@@ -96,14 +96,16 @@ class Calculator extends React.Component {
   }
 
   valueChange(newValue) {
-    this.setState((prevState) => ({ value: prevState.value.concat(newValue) }));
+    if (newValue.length > 0) {
+      this.setState((prevState) => ({ value: prevState.value.concat(newValue) }));
+    } else this.setState({ value: '' });
   }
 
   render() {
     const { value } = this.state;
     return (
       <div className="calc-wrapper">
-        <input type="text" placeholder="0" className="calc-input" value={value} />
+        <input type="text" placeholder="0" className="calc-input" value={value} readOnly />
         <div className="buttons-container">
           {
             buttons.map((button, index) => (
