@@ -9,11 +9,12 @@ class CalculatorButton extends React.Component {
   }
 
   handleClick() {
-    const { isOperation } = this.props;
+    const { label, isOperation, valueChange } = this.props;
     if (isOperation) {
       // Handle Arithmetic Operations
     }
     // update input value
+    valueChange(label);
   }
 
   render() {
@@ -27,11 +28,13 @@ class CalculatorButton extends React.Component {
 CalculatorButton.propTypes = {
   label: PropTypes.string,
   isOperation: PropTypes.bool,
+  valueChange: PropTypes.func,
 };
 
 // Creating default props
 CalculatorButton.defaultProps = {
   label: 'Button Label',
   isOperation: false,
+  valueChange: () => {},
 };
 export default CalculatorButton;

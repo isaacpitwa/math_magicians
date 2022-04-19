@@ -89,19 +89,28 @@ const buttons = [
 class Calculator extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      value: '',
+    };
+    this.valueChange = this.valueChange.bind(this);
+  }
+
+  valueChange(newValue) {
+    this.setState((prevState) => ({ value: prevState.value.concat(newValue) }));
   }
 
   render() {
+    const { value } = this.state;
     return (
       <div className="calc-wrapper">
-        <input type="number" placeholder="0" className="calc-input" />
+        <input type="text" placeholder="0" className="calc-input" value={value} />
         <div className="buttons-container">
           {
             buttons.map((button, index) => (
               <CalculatorButton
                 label={button.label}
                 isOperation={button.isOperation}
+                valueChange={this.valueChange}
                 key={index}
               />
             ))
