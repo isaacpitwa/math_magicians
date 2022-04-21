@@ -101,9 +101,6 @@ class Calculator extends React.Component {
 
   valueChange(calc) {
     this.setState({ ...calc });
-    // if (newValue.length > 0) {
-    //   this.setState((prevState) => ({ value: prevState.value.concat(newValue) }));
-    // } else this.setState({ value: '' });
   }
 
   render() {
@@ -116,7 +113,6 @@ class Calculator extends React.Component {
             buttons.map((button, index) => (
               <CalculatorButton
                 label={button.label}
-                isOperation={button.isOperation}
                 valueChange={this.valueChange}
                 key={index}
                 calcObject={this.state}
