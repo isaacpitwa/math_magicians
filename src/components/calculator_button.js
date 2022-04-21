@@ -1,24 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import calculate from '../logic/calculate';
 
 class CalculatorButton extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {};
     this.handleClick = this.handleClick.bind(this);
   }
 
   handleClick() {
-    const { label, isOperation, valueChange } = this.props;
-    if (isOperation) {
-      // Handle Arithmetic Operations
-    }
-    // update input value
-    if (label === 'AC') {
-      valueChange('');
-      return;
-    }
-    valueChange(label);
+    const {
+      label, valueChange, calcObject,
+    } = this.props;
+    const calc = calculate(calcObject, label);
+    valueChange(calc);
   }
 
   render() {
@@ -31,14 +26,22 @@ class CalculatorButton extends React.Component {
 
 CalculatorButton.propTypes = {
   label: PropTypes.string,
-  isOperation: PropTypes.bool,
   valueChange: PropTypes.func,
+  calcObject: PropTypes.objectOf({
+    total: PropTypes.any,
+    next: PropTypes.string.isRequired,
+    operation: PropTypes.any,
+  }),
 };
 
 // Creating default props
 CalculatorButton.defaultProps = {
   label: 'Button Label',
-  isOperation: false,
   valueChange: () => {},
+  calcObject: {
+    total: null,
+    next: '0',
+    operation: null,
+  },
 };
 export default CalculatorButton;
