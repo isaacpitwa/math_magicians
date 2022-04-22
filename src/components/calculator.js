@@ -1,5 +1,4 @@
-/* eslint-disable react/no-array-index-key */
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import CalculatorButton from './calculator_button';
 
 const buttons = [
@@ -86,42 +85,34 @@ const buttons = [
 
 ];
 
-class Calculator extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      value: '',
-    };
-    this.valueChange = this.valueChange.bind(this);
-  }
+function Calculator() {
+  const [stateValue, setStateValue] = useState({
+    total: null,
+    next: '0',
+    operation: null,
+  });
 
-  valueChange(newValue) {
-    if (newValue.length > 0) {
-      this.setState((prevState) => ({ value: prevState.value.concat(newValue) }));
-    } else this.setState({ value: '' });
-  }
-
-  render() {
-    const { value } = this.state;
-    return (
-      <div className="calc-wrapper">
-        <input type="text" placeholder="0" className="calc-input" value={value} readOnly />
-        <div className="buttons-container">
-          {
-            buttons.map((button, index) => (
-              <CalculatorButton
-                label={button.label}
-                isOperation={button.isOperation}
-                valueChange={this.valueChange}
-                key={index}
-              />
-            ))
-        }
-        </div>
+  const valueChange = (calc) => {
+    setStateValue({ ...calc });
+  };
+  const { total, next, operation } = stateValue;
+  return (
+    <div className="calc-wrapper">
+      <input type="text" placeholder="0" className="calc-input" value={total !== null && next == null ? total : next} readOnly />
+      <p hidden>{operation}</p>
+      <div className="buttons-container">
+        {
+          buttons.map((button) => (
+            <CalculatorButton
+              label={button.label}
+              valueChange={valueChange}
+              key={button.label}
+              calcObject={stateValue}
+            />
+          ))
+      }
       </div>
-    );
-  }
+    </div>
+  );
 }
-
-
 export default Calculator;
