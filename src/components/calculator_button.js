@@ -28,9 +28,9 @@ CalculatorButton.propTypes = {
   label: PropTypes.string,
   valueChange: PropTypes.func,
   calcObject: PropTypes.objectOf({
-    total: PropTypes.any,
+    total: PropTypes.string,
     next: PropTypes.string.isRequired,
-    operation: PropTypes.any,
+    operation: PropTypes.string,
   }),
 };
 

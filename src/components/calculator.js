@@ -1,5 +1,3 @@
-/* eslint-disable react/no-unused-state */
-/* eslint-disable react/no-array-index-key */
 import React from 'react';
 import CalculatorButton from './calculator_button';
 
