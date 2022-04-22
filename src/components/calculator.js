@@ -1,4 +1,3 @@
-/* eslint-disable react/no-array-index-key */
 import React from 'react';
 import CalculatorButton from './calculator_button';
 
@@ -90,30 +89,31 @@ class Calculator extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      value: '',
+      total: null,
+      next: '0',
+      operation: null,
     };
     this.valueChange = this.valueChange.bind(this);
   }
 
-  valueChange(newValue) {
-    if (newValue.length > 0) {
-      this.setState((prevState) => ({ value: prevState.value.concat(newValue) }));
-    } else this.setState({ value: '' });
+  valueChange(calc) {
+    this.setState({ ...calc });
   }
 
   render() {
-    const { value } = this.state;
+    const { total, next, operation } = this.state;
     return (
       <div className="calc-wrapper">
-        <input type="text" placeholder="0" className="calc-input" value={value} readOnly />
+        <input type="text" placeholder="0" className="calc-input" value={total !== null && next == null ? total : next} readOnly />
+        <p hidden>{operation}</p>
         <div className="buttons-container">
           {
-            buttons.map((button, index) => (
+            buttons.map((button) => (
               <CalculatorButton
                 label={button.label}
-                isOperation={button.isOperation}
                 valueChange={this.valueChange}
-                key={index}
+                key={button.label}
+                calcObject={this.state}
               />
             ))
         }
