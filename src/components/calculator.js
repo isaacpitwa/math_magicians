@@ -89,7 +89,6 @@ class Calculator extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      value: '',
       total: null,
       next: '0',
       operation: null,
@@ -102,17 +101,18 @@ class Calculator extends React.Component {
   }
 
   render() {
-    const { total, next } = this.state;
+    const { total, next, operation } = this.state;
     return (
       <div className="calc-wrapper">
         <input type="text" placeholder="0" className="calc-input" value={total !== null && next == null ? total : next} readOnly />
+        <p hidden>{operation}</p>
         <div className="buttons-container">
           {
-            buttons.map((button, index) => (
+            buttons.map((button) => (
               <CalculatorButton
                 label={button.label}
                 valueChange={this.valueChange}
-                key={index}
+                key={button.label}
                 calcObject={this.state}
               />
             ))
