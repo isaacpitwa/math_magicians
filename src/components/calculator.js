@@ -1,5 +1,5 @@
 /* eslint-disable react/no-array-index-key */
-import React from 'react';
+import React, {useState} from 'react';
 import CalculatorButton from './calculator_button';
 
 const buttons = [
@@ -122,5 +122,6 @@ class Calculator extends React.Component {
     );
   }
 }
+
 
 export default Calculator;
