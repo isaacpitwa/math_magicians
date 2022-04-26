@@ -50,5 +50,20 @@
 }
 
 .container {
-  padding: 0 8px;
+  padding: 0 8%;
+}
+.quote-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 75vh;
+}
+.quote-container p{
+  font-size: 32px;
+}
+.home-container h4 {
+  font-size: 28px;
+}
+.home-container p{
+  font-size: 18px;
 }

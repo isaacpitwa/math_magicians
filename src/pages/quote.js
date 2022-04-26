@@ -2,8 +2,12 @@ import React from 'react';
 
 function Quote() {
   return (
-    <div>
-      <h3>Quotes are here</h3>
+    <div className="quote-container">
+      <p>
+        Mathematics is not about numbers, equations,
+        computations or algorithms: it is about understanding.
+        -William Paul Thurston
+      </p>
     </div>
   );
 }

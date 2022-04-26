@@ -6,7 +6,7 @@ header {
 }
 
 header h3 {
-  font-size: 21px;
+  font-size: 32px;
 }
 
 nav {
@@ -17,4 +17,7 @@ nav {
 nav li {
   padding: 0 12px;
   border-right: 2px solid black;
+}
+nav li a {
+    font-size: 21px;
 }
