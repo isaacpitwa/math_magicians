@@ -9,6 +9,10 @@ header h3 {
   font-size: 32px;
 }
 
+header h3 a {
+    text-decoration: none;
+}
+
 nav {
   display: flex;
   list-style: none;
@@ -21,4 +25,12 @@ nav li {
 
 nav li a {
   font-size: 21px;
+}
+
+nav li a:active {
+    color : goldenrod;
+}
+
+a:visited {
+    color: inherit;
 }
