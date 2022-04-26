@@ -48,3 +48,7 @@
 .calc-btn:last-child {
   background-color: #f5913e;
 }
+
+.container {
+  padding: 0 8px;
+}
