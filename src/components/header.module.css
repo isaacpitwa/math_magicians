@@ -10,7 +10,7 @@ header h3 {
 }
 
 header h3 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 nav {
@@ -27,10 +27,10 @@ nav li a {
   font-size: 21px;
 }
 
-nav li a:active {
-    color : goldenrod;
+a:visited {
+  color: inherit;
 }
 
-a:visited {
-    color: inherit;
+nav li a:active {
+  color: goldenrod;
 }
