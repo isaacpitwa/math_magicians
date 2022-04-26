@@ -8,8 +8,8 @@ class App extends React.PureComponent {
   render() {
     return (
       <Routes>
-        <Route path="/" component={<Home />} />
-        <Route path="calculator" component={<Calculator />} />
+        <Route path="/" element={<Home />} />
+        <Route path="calculator" element={<Calculator />} />
       </Routes>
     );
   }

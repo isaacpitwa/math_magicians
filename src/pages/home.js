@@ -3,7 +3,7 @@ import React from 'react';
 function Home() {
   return (
     <div>
-      <h3>No match for this page</h3>
+      <h3>Home Page</h3>
     </div>
   );
 }
