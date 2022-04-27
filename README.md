@@ -1,11 +1,14 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 # Math magicians
 
-> TODO List you will build a React app list of To Do tasks. 
+> "Math magicians" is a website for all fans of mathematics. It is a Single Page App (SPA) that allows users to:
 
-<!-- ## Live preview
+- Make simple calculations.
+- Read a random math-related quote.
 
-Take a look at the Movies page we Create => [link](https://juanse7793.github.io/Capstone-2/) -->
+## Live preview
+
+Take a look at the Movies page we Create => [link](https://isaacpitwa.github.io/math_magicians/)
 
 ## Built With
 
