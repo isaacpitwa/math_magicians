@@ -5,6 +5,7 @@ import Home from './pages/home';
 import Header from './components/header';
 import Quote from './pages/quote';
 import CalculatorPage from './pages/calculator';
+import NotFound from './pages/not_found';
 
 class App extends React.PureComponent {
   render() {
@@ -15,6 +16,7 @@ class App extends React.PureComponent {
           <Route path="/" element={<Home />} exact />
           <Route path="calculator" element={<CalculatorPage />} />
           <Route path="quote" element={<Quote />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </div>
     );
