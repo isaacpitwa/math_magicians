@@ -8,7 +8,15 @@
 
 ## Live preview
 
+### Github
 Take a look at the Movies page we Create => [link](https://isaacpitwa.github.io/math_magicians/)
+
+### Heroku
+Take a look at the Movies page we Create => [link](https://polar-shelf-17959.herokuapp.com/)
+
+
+### Netlify
+Take a look at the Movies page we Create => [link](https://math-magics.netlify.app/)
 
 ## Built With
 
